@@ -13,12 +13,8 @@ public class StudentAppInfo {
 	@GeneratedValue( strategy= GenerationType.IDENTITY ) 
 	private int id;
 	
-	@OneToOne
-	private Users user;
-	
-	@OneToOne
-	private Courses course;
-	
+	private int user;
+	private int course;
 	private int perTen;
 	private int perTwelve;
 	private int jeeMarks;
@@ -31,16 +27,16 @@ public class StudentAppInfo {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Users getUser() {
+	public int getUser() {
 		return user;
 	}
-	public void setUser(Users user) {
+	public void setUser(int user) {
 		this.user = user;
 	}
-	public Courses getCourse() {
+	public int getCourse() {
 		return course;
 	}
-	public void setCourse(Courses course) {
+	public void setCourse(int course) {
 		this.course = course;
 	}
 	public int getPerTen() {
