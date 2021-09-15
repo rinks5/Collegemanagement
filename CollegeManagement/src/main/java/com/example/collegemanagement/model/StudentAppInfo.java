@@ -14,12 +14,13 @@ public class StudentAppInfo {
 	private int id;
 	
 	private int user;
-	private int course;
+	private String course;
 	private int perTen;
 	private int perTwelve;
 	private int jeeMarks;
 	private String appStatus;
 	private String appComment;
+	private String userName;
 	
 	public int getId() {
 		return id;
@@ -33,10 +34,10 @@ public class StudentAppInfo {
 	public void setUser(int user) {
 		this.user = user;
 	}
-	public int getCourse() {
+	public String getCourse() {
 		return course;
 	}
-	public void setCourse(int course) {
+	public void setCourse(String course) {
 		this.course = course;
 	}
 	public int getPerTen() {
@@ -68,6 +69,12 @@ public class StudentAppInfo {
 	}
 	public void setAppComment(String appComment) {
 		this.appComment = appComment;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 }
