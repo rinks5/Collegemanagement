@@ -1,5 +1,6 @@
 package com.example.collegemangement.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,11 @@ public class AppInfoController {
 	}
 	
 	@GetMapping("getStudentDetail")
-	public ResponseEntity<StudentAppInfo> getStudentDetail(@RequestParam("id") Integer id){
+	public ResponseEntity<List<StudentAppInfo>> getStudentDetail(@RequestParam("id") Integer id){
+		List<StudentAppInfo> result = new ArrayList<>();
 		StudentAppInfo student = infoService.getStudentDetail(id);
-		return ResponseEntity.ok().body(student);
+		result.add(student);
+		return ResponseEntity.ok().body(result);
 	}
 	
 	@PostMapping("saveInfo")

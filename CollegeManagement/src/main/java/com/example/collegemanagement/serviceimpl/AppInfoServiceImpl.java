@@ -43,6 +43,7 @@ public class AppInfoServiceImpl implements AppInfoService {
 			old.setJeeMarks(student.getJeeMarks());
 			old.setAppComment(student.getAppComment());
 			old.setAppStatus(student.getAppStatus());
+			old.setUserName(student.getUserName());
 			infoRepo.save(old);
 			return true;
 		}
